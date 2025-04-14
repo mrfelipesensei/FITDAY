@@ -41,14 +41,12 @@ def register_user():
         print("Cadastro realizado com sucesso.")
 
 def registrar_treino():
-    with open("treinos.json","r") as f:
-        treinos = json.load(f)
-    
-    if not os.path.exists("treinos.json"):
-        with open("treinos.json","w") as f:
-            json.dump({},f)
-
-
+    if os.path.exists("treinos.json"):
+        with open("treinos.json","r") as f:
+            treinos = json.load(f)
+    else:
+        treinos = {}
+        
 
 '''Função registrar_treino(usuario):
     Tentar abrir o arquivo "treinos.json" para leitura
