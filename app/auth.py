@@ -1,5 +1,6 @@
 import json
 import os
+from datetime import datetime
 
 def login_user():
     username = input("Digite o nome de usuário: ")
@@ -46,15 +47,31 @@ def registrar_treino():
             treinos = json.load(f)
     else:
         treinos = {}
-        
 
-'''Função registrar_treino(usuario):
-    Tentar abrir o arquivo "treinos.json" para leitura
-        Se o arquivo existir:
-            Carregar os dados do JSON em uma variável chamada "treinos"
-        Se o arquivo não existir:
-            Criar uma variável "treinos" como dicionário vazio
+        data_hoje = datetime.today().strftime("%Y-%m-%d")
 
+        if data_hoje in treinos:
+            print("Treino de hoje já registrado.")
+        else:
+            grupo_muscular = input("Digite o Grupo Muscular: ")
+            nome_exercicio = input("Digite o Nome do Exercício: ")
+            carga = float(input("Digite o Valor da Carga: "))
+            repeticoes = int(input("Digite o Número de Repetições: "))
+
+            treino = {
+                "data" : data_hoje,
+                "grupo_muscular" : grupo_muscular,
+                "nome_exercicio" : nome_exercicio,
+                "carga" : carga,
+                "repeticoes" : repeticoes
+            }
+
+            #Adiciona esse treino ao dicionário de treinos
+            treinos[data_hoje] = treino
+
+
+
+'''
     Obter a data atual no formato "YYYY-MM-DD"
 
     Solicitar ao usuário:
