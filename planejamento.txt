@@ -1,0 +1,14 @@
+1 . App de treino com frequência e gráficos
+2 . Primeira versão - simples mais funcional
+	- Entrada de dados;
+	- Salvamento local (JSON ou banco simples)
+	- Exibição de dados com interface mínima (React)
+3 . Planejamento
+- Protótipo - fluxos, telas;
+- V 1.0 funcional
+- Testes + deploy simples
+4 . Readme básico - explicando o que é e como roda
+5 . Reflexões
+- O que funcionou bem?
+- O que aprendi?
+- Qual é a próxima funcionalidade?
