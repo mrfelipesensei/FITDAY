@@ -20,6 +20,7 @@ def login_user():
         print("Senha incorreta.")
     else:
         print("Login bem-sucedido. Bem-vindo {}!".format(username))
+        return username #Retorna o username após o login bem-sucedido
 
 
 def register_user():
