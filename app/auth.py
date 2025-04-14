@@ -64,8 +64,7 @@ def registrar_treino(username):
         print("Entrada inválida! Carga e repetições devem ser números.")
         return
 
-    print(f"\n Treino realizado com sucesso!\n{treino}")
-
+    
     treino = {
         "data" : data_hoje,
         "grupo_muscular" : grupo_muscular,
@@ -74,11 +73,17 @@ def registrar_treino(username):
         "repeticoes" : repeticoes
     }
 
+    #Confirmação
+    print(f"\n Treino realizado com sucesso!\n{treino}")
+
+
+    #Armazenando o treino
     if username in treinos:
         treinos[username].append(treino)
     else:
         treinos[username] = [treino]
 
+    #Salvando os dados de treino no arquivo
     with open("treinos.json","w") as f:
         json.dump(treinos,f,indent=4)
 
