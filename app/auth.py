@@ -5,6 +5,11 @@ def login_user():
     username = input("Digite o nome de usuário: ")
     password = input("Digite sua senha: ")
 
+    if not os.path.exists("users.json"):
+        print("Nenhum usuário cadastrado ainda. Por favor, cadastre-se.")
+        return
+
+    
     with open("users.json","r") as f:
         users = json.load(f)
 
@@ -31,6 +36,6 @@ def register_user():
         print("Usuário já cadastrado.")
     else:
         users[username] = password
-        with open("users.josn","w") as f:
+        with open("users.json","w") as f:
             json.dump(users,f)
         print("Cadastro realizado com sucesso.")
