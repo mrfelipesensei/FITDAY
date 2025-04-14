@@ -41,33 +41,38 @@ def register_user():
             json.dump(users,f)
         print("Cadastro realizado com sucesso.")
 
-def registrar_treino():
+def registrar_treino(username):
     if os.path.exists("treinos.json"):
         with open("treinos.json","r") as f:
             treinos = json.load(f)
     else:
         treinos = {}
 
-        data_hoje = datetime.today().strftime("%Y-%m-%d")
+    data_hoje = datetime.today().strftime("%Y-%m-%d")
 
-        if data_hoje in treinos:
-            print("Treino de hoje já registrado.")
-        else:
-            grupo_muscular = input("Digite o Grupo Muscular: ")
-            nome_exercicio = input("Digite o Nome do Exercício: ")
-            carga = float(input("Digite o Valor da Carga: "))
-            repeticoes = int(input("Digite o Número de Repetições: "))
+    if username in treinos and any(t['data'] == data_hoje for t in treinos[username]):
+        print("Treino de hoje já registrado.")
+        return
 
-            treino = {
-                "data" : data_hoje,
-                "grupo_muscular" : grupo_muscular,
-                "nome_exercicio" : nome_exercicio,
-                "carga" : carga,
-                "repeticoes" : repeticoes
-            }
+    grupo_muscular = input("Digite o Grupo Muscular: ")
+    nome_exercicio = input("Digite o Nome do Exercício: ")
+    carga = float(input("Digite o Valor da Carga: "))
+    repeticoes = int(input("Digite o Número de Repetições: "))
 
-            #Adiciona esse treino ao dicionário de treinos
-            treinos[data_hoje] = treino
+    treino = {
+        "data" : data_hoje,
+        "grupo_muscular" : grupo_muscular,
+        "nome_exercicio" : nome_exercicio,
+        "carga" : carga,
+        "repeticoes" : repeticoes
+    }
+
+    if username in treinos:
+        treinos[username].append(treino)
+    else:
+        treinos[username] = [treino]
+
+
 
 
 
