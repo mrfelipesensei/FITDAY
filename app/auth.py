@@ -54,10 +54,16 @@ def registrar_treino(username):
         print("Treino de hoje já registrado.")
         return
 
-    grupo_muscular = input("Digite o Grupo Muscular: ")
-    nome_exercicio = input("Digite o Nome do Exercício: ")
-    carga = float(input("Digite o Valor da Carga: "))
-    repeticoes = int(input("Digite o Número de Repetições: "))
+    grupo_muscular = input("Digite o Grupo Muscular: ").strip().lower()
+    nome_exercicio = input("Digite o Nome do Exercício: ").strip().lower()
+    try:
+        carga = float(input("Digite o Valor da Carga: "))
+        repeticoes = int(input("Digite o Número de Repetições: "))
+    except ValueError:
+        print("Entrada inválida! Carga e repetições devem ser números.")
+        return
+
+    print(f"\n Treino realizado com sucesso!\n{treino}")
 
     treino = {
         "data" : data_hoje,
