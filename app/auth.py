@@ -72,35 +72,8 @@ def registrar_treino(username):
     else:
         treinos[username] = [treino]
 
+    with open("treinos.json","w") as f:
+        json.dump(treinos,f,indent=4)
 
+    print("Treino registrado com sucesso!")
 
-
-
-'''
-    Obter a data atual no formato "YYYY-MM-DD"
-
-    Solicitar ao usuário:
-        - Grupo muscular
-        - Nome do exercício
-        - Peso (converter para float)
-        - Repetições (converter para int)
-
-    Criar um dicionário com os dados do treino:
-        {
-            "data": data_atual,
-            "grupo_muscular": valor digitado,
-            "exercicio": valor digitado,
-            "peso": valor digitado,
-            "repeticoes": valor digitado
-        }
-
-    Se o nome de usuário estiver em "treinos":
-        Adicionar o novo treino à lista do usuário com .append()
-    Senão:
-        Criar uma nova lista com esse treino como primeiro item e associar ao usuário
-
-    Abrir o arquivo "treinos.json" para escrita
-        Salvar os dados atualizados com json.dump()
-
-    Exibir mensagem: "Treino registrado com sucesso!"
-'''
