@@ -119,9 +119,16 @@ def ver_treinos_por_data(username):
         return
     
     
-    if username in treinos and any(t['data'] == select_data for t in treinos[username]):
-        for t in treinos:
-            print(t)
+    #Filtrar os treinos pela data fornecdia
+    treinos_do_usuario = [t for t in treinos[username] if t['data'] == select_data]
+
+    if treinos_do_usuario:
+        for treino in treinos_do_usuario:
+            print(f"Data: {treino['data']}")
+            print(f"Grupo Muscular: {treino['grupo_muscular']}")
+            print(f"Nome do Exercício: {treino['nome_exercicio']}")
+            print(f"Carfa: {treino['carga']}")
+            print(f"Repetições: {treino['repeticoes']}")
+            print("-" * 20) #Separador entre os treinos
     else:
         print("Nenhum treino encontrado para essa data.")
-    
