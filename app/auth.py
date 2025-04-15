@@ -57,38 +57,47 @@ def registrar_treino(username):
     if username in treinos and any(t['data'] == data_hoje for t in treinos[username]):
         print("Treino de hoje já registrado.")
         return
-
-    grupo_muscular = input("Digite o Grupo Muscular: ").strip().lower()
-    nome_exercicio = input("Digite o Nome do Exercício: ").strip().lower()
+    
     try:
-        carga = float(input("Digite o Valor da Carga: "))
-        repeticoes = int(input("Digite o Número de Repetições: "))
+        qtd_exercicios = int(input("Quantos exercícios você irá registrar? "))
     except ValueError:
-        print("Entrada inválida! Carga e repetições devem ser números.")
+        print("Quantidade de Exercícios deve ser um número inteiro.")
         return
 
+    treinos_do_dia = []
+
+    for i in range(qtd_exercicios):
+        print(f"\nExercício {i+1} de {qtd_exercicios}")
+        grupo_muscular = input("Digite o Grupo Muscular: ").strip().lower()
+        nome_exercicio = input("Digite o Nome do Exercício: ").strip().lower()
+        try:
+            carga = float(input("Digite o Valor da Carga: "))
+            repeticoes = int(input("Digite o Número de Repetições: "))
+        except ValueError:
+            print("Entrada inválida! Carga e repetições devem ser números.")
+            continue
+
     
-    treino = {
-        "data" : data_hoje,
-        "grupo_muscular" : grupo_muscular,
-        "nome_exercicio" : nome_exercicio,
-        "carga" : carga,
-        "repeticoes" : repeticoes
-    }
+        treino = {
+            "data" : data_hoje,
+            "grupo_muscular" : grupo_muscular,
+            "nome_exercicio" : nome_exercicio,
+            "carga" : carga,
+            "repeticoes" : repeticoes
+        }
 
-    #Confirmação
-    print(f"\n Treino realizado com sucesso!\n{treino}")
-
+    #Adiciona treino à lista treinos_do_dia
+    treinos_do_dia.append(treino)
 
     #Armazenando o treino
     if username in treinos:
-        treinos[username].append(treino)
+        treinos[username].extend(treinos_do_dia) #adiciona todos
     else:
-        treinos[username] = [treino]
+        treinos[username] = treinos_do_dia
 
     #Salvando os dados de treino no arquivo
     with open("treinos.json","w") as f:
         json.dump(treinos,f,indent=4)
 
-    print("Treino registrado com sucesso!")
+    print(f"\n{len(treinos_do_dia)} exercícios(s) registrado(s) com sucesso!")
 
