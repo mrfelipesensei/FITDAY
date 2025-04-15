@@ -6,6 +6,13 @@
             "nome_exercicio": "rosca halter",
             "carga": 30.0,
             "repeticoes": 10
+        },
+        {
+            "data": "2025-04-15",
+            "grupo_muscular": "abdomen",
+            "nome_exercicio": "m\u00e1quina",
+            "carga": 45.0,
+            "repeticoes": 10
         }
     ]
 }

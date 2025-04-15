@@ -6,8 +6,8 @@ def login_user():
     username = input("Digite o nome de usuário: ").strip().lower()
     password = input("Digite sua senha: ").strip().lower()
 
-    print("Caminho atual: ",os.getcwd())
-    print("Existe users.json?",os.path.exists("users.json"))
+    '''print("Caminho atual: ",os.getcwd())
+    print("Existe users.json?",os.path.exists("users.json"))'''
 
     if not os.path.exists("users.json"):
         print("Nenhum usuário cadastrado ainda. Por favor, cadastre-se.")
@@ -55,8 +55,11 @@ def registrar_treino(username):
     data_hoje = datetime.today().strftime("%Y-%m-%d")
 
     if username in treinos and any(t['data'] == data_hoje for t in treinos[username]):
-        print("Treino de hoje já registrado.")
-        return
+        opt = input("Treino de hoje já registrado. Gostaria de registrar outro? (s/n)")
+        if opt != "s":
+            print("Processo encerrado.")
+            return
+            
     
     try:
         qtd_exercicios = int(input("Quantos exercícios você irá registrar? "))

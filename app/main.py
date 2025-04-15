@@ -11,7 +11,7 @@ def main():
 
         if opt == "1":
             username = login_user() #Armazena o username retornado
-            print("DEBUG: username retornado foi",username)
+            '''print("DEBUG: username retornado foi",username)'''
             if username: #Só chama o menu de usuário se o login for bem-sucesido
                 menu_usuario(username)
         elif opt == "2":
