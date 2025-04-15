@@ -3,8 +3,11 @@ import os
 from datetime import datetime
 
 def login_user():
-    username = input("Digite o nome de usuário: ")
-    password = input("Digite sua senha: ")
+    username = input("Digite o nome de usuário: ").strip().lower()
+    password = input("Digite sua senha: ").strip().lower()
+
+    print("Caminho atual: ",os.getcwd())
+    print("Existe users.json?",os.path.exists("users.json"))
 
     if not os.path.exists("users.json"):
         print("Nenhum usuário cadastrado ainda. Por favor, cadastre-se.")
