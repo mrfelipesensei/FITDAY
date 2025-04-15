@@ -104,3 +104,24 @@ def registrar_treino(username):
 
     print(f"\n{len(treinos_do_dia)} exercícios(s) registrado(s) com sucesso!")
 
+def ver_treinos_por_data(username):
+    if os.path.exists("treinos.json"):
+        with open("treinos.json","r") as f:
+            treinos = json.load(f)
+    else:
+        print("Nenhum treino registrado.")
+        return
+    
+    select_data = input("Digite a data desejada (formato: yyyy-mm-dd): ")
+
+    if username not in treinos:
+        print("Nenhum treino registrado para esse usuário.")
+        return
+    
+    
+    if username in treinos and any(t['data'] == select_data for t in treinos[username]):
+        for t in treinos:
+            print(t)
+    else:
+        print("Nenhum treino encontrado para essa data.")
+    

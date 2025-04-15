@@ -1,4 +1,4 @@
-from auth import login_user, register_user, registrar_treino
+from auth import login_user, register_user, registrar_treino, ver_treinos_por_data
 
 def main():
     while True:
@@ -34,7 +34,7 @@ def menu_usuario(username):
         if opt == "1":
             registrar_treino(username)
         elif opt == "2":
-            print("Aqui você verá Seus Treinos")
+            ver_treinos_por_data(username)
         elif opt == "3":
             print("Saindo...")
             break
