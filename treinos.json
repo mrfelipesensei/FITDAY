@@ -122,6 +122,251 @@
             "repeticoes": 25
         },
         {
+            "data": "2024-11-02",
+            "grupo_muscular": "biceps",
+            "nome_exercicio": "pulley",
+            "carga": 40.0,
+            "repeticoes": 14
+        },
+        {
+            "data": "2024-11-02",
+            "grupo_muscular": "peito",
+            "nome_exercicio": "crucifixo",
+            "carga": 40.0,
+            "repeticoes": 15
+        },
+        {
+            "data": "2024-11-02",
+            "grupo_muscular": "antebra\u00e7o",
+            "nome_exercicio": "pulso",
+            "carga": 40.0,
+            "repeticoes": 15
+        },
+        {
+            "data": "2024-11-02",
+            "grupo_muscular": "costas",
+            "nome_exercicio": "remada",
+            "carga": 40.0,
+            "repeticoes": 15
+        },
+        {
+            "data": "2024-11-02",
+            "grupo_muscular": "quadriceps",
+            "nome_exercicio": "extensora",
+            "carga": 35.0,
+            "repeticoes": 25
+        },
+        {
+            "data": "2024-11-05",
+            "grupo_muscular": "costas",
+            "nome_exercicio": "puxada",
+            "carga": 40.0,
+            "repeticoes": 10
+        },
+        {
+            "data": "2024-11-05",
+            "grupo_muscular": "peito",
+            "nome_exercicio": "supino sentado",
+            "carga": 50.0,
+            "repeticoes": 20
+        },
+        {
+            "data": "2024-11-05",
+            "grupo_muscular": "antebra\u00e7o",
+            "nome_exercicio": "pulley",
+            "carga": 40.0,
+            "repeticoes": 16
+        },
+        {
+            "data": "2024-11-05",
+            "grupo_muscular": "panturrilha",
+            "nome_exercicio": "eleva\u00e7ao",
+            "carga": 80.0,
+            "repeticoes": 30
+        },
+        {
+            "data": "2024-11-05",
+            "grupo_muscular": "trapezio",
+            "nome_exercicio": "halter",
+            "carga": 10.0,
+            "repeticoes": 25
+        },
+        {
+            "data": "2024-11-06",
+            "grupo_muscular": "biceps",
+            "nome_exercicio": "pulley",
+            "carga": 45.0,
+            "repeticoes": 12
+        },
+        {
+            "data": "2024-11-06",
+            "grupo_muscular": "costas",
+            "nome_exercicio": "remada",
+            "carga": 40.0,
+            "repeticoes": 20
+        },
+        {
+            "data": "2024-11-06",
+            "grupo_muscular": "quadriceps",
+            "nome_exercicio": "extensora",
+            "carga": 50.0,
+            "repeticoes": 16
+        },
+        {
+            "data": "2024-11-06",
+            "grupo_muscular": "femoral",
+            "nome_exercicio": "stiff",
+            "carga": 35.0,
+            "repeticoes": 15
+        },
+        {
+            "data": "2024-11-06",
+            "grupo_muscular": "abdomen",
+            "nome_exercicio": "triangulo",
+            "carga": 35.0,
+            "repeticoes": 15
+        },
+        {
+            "data": "2024-11-07",
+            "grupo_muscular": "triceps",
+            "nome_exercicio": "pulley",
+            "carga": 55.0,
+            "repeticoes": 11
+        },
+        {
+            "data": "2024-11-07",
+            "grupo_muscular": "ombro",
+            "nome_exercicio": "eleva\u00e7ao",
+            "carga": 10.0,
+            "repeticoes": 20
+        },
+        {
+            "data": "2024-11-07",
+            "grupo_muscular": "antebra\u00e7o",
+            "nome_exercicio": "pulso",
+            "carga": 45.0,
+            "repeticoes": 15
+        },
+        {
+            "data": "2024-11-07",
+            "grupo_muscular": "peito",
+            "nome_exercicio": "crucifixo",
+            "carga": 40.0,
+            "repeticoes": 15
+        },
+        {
+            "data": "2024-11-07",
+            "grupo_muscular": "costas",
+            "nome_exercicio": "puxada",
+            "carga": 40.0,
+            "repeticoes": 12
+        },
+        {
+            "data": "2024-11-08",
+            "grupo_muscular": "peito",
+            "nome_exercicio": "supino sentado",
+            "carga": 50.0,
+            "repeticoes": 22
+        },
+        {
+            "data": "2024-11-08",
+            "grupo_muscular": "trapezio",
+            "nome_exercicio": "halter",
+            "carga": 10.0,
+            "repeticoes": 30
+        },
+        {
+            "data": "2024-11-08",
+            "grupo_muscular": "quadriceps",
+            "nome_exercicio": "extensora",
+            "carga": 50.0,
+            "repeticoes": 18
+        },
+        {
+            "data": "2024-11-08",
+            "grupo_muscular": "femoral",
+            "nome_exercicio": "stiff",
+            "carga": 30.0,
+            "repeticoes": 15
+        },
+        {
+            "data": "2024-11-08",
+            "grupo_muscular": "biceps",
+            "nome_exercicio": "pulley",
+            "carga": 45.0,
+            "repeticoes": 15
+        },
+        {
+            "data": "2024-11-11",
+            "grupo_muscular": "biceps",
+            "nome_exercicio": "pulley",
+            "carga": 45.0,
+            "repeticoes": 13
+        },
+        {
+            "data": "2024-11-11",
+            "grupo_muscular": "triceps",
+            "nome_exercicio": "pulley",
+            "carga": 25.0,
+            "repeticoes": 11
+        },
+        {
+            "data": "2024-11-11",
+            "grupo_muscular": "costas",
+            "nome_exercicio": "puxada",
+            "carga": 40.0,
+            "repeticoes": 10
+        },
+        {
+            "data": "2024-11-11",
+            "grupo_muscular": "antebra\u00e7o",
+            "nome_exercicio": "pulso",
+            "carga": 45.0,
+            "repeticoes": 11
+        },
+        {
+            "data": "2024-11-11",
+            "grupo_muscular": "peito",
+            "nome_exercicio": "crucifixo",
+            "carga": 40.0,
+            "repeticoes": 12
+        },
+        {
+            "data": "2024-11-12",
+            "grupo_muscular": "ombro",
+            "nome_exercicio": "eleva\u00e7ao",
+            "carga": 10.0,
+            "repeticoes": 15
+        },
+        {
+            "data": "2024-11-12",
+            "grupo_muscular": "femoral",
+            "nome_exercicio": "stiff",
+            "carga": 45.0,
+            "repeticoes": 15
+        },
+        {
+            "data": "2024-11-12",
+            "grupo_muscular": "trapezio",
+            "nome_exercicio": "halter",
+            "carga": 10.0,
+            "repeticoes": 30
+        },
+        {
+            "data": "2024-11-12",
+            "grupo_muscular": "abdomen",
+            "nome_exercicio": "triangulo",
+            "carga": 35.0,
+            "repeticoes": 20
+        },
+        {
+            "data": "2024-11-12",
+            "grupo_muscular": "quadriceps",
+            "nome_exercicio": "extensora",
+            "carga": 50.0,
+            "repeticoes": 20
+        },
+        {
             "data": "2025-04-16",
             "grupo_muscular": "antebra\u00e7o",
             "nome_exercicio": "kawai",
