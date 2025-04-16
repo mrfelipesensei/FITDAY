@@ -132,3 +132,24 @@ def ver_treinos_por_data(username):
             print("-" * 20) #Separador entre os treinos
     else:
         print("Nenhum treino encontrado para essa data.")
+
+def gerar_grafico_frequencia(username):
+    if os.path.exists("treinos.json"):
+        with open("treinos.json") as f:
+            treinos = json.load(f)
+    else:
+        print("Nenhum treino encontrado")
+        return
+
+    if username not in treinos:
+        print("Nenhum treino registrado para esse usuário.")
+        return
+    
+    frequencia_por_data = []
+
+    for treino in treinos[username]:
+        data = treino["data"]
+        if data in frequencia_por_data:
+            treino = treino + 1
+        else:
+            treino = 1
