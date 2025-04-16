@@ -1,6 +1,7 @@
 import json
 import os
 from datetime import datetime
+import matplotlib.pyplot as plt
 
 def login_user():
     username = input("Digite o nome de usuário: ").strip().lower()
@@ -145,11 +146,29 @@ def gerar_grafico_frequencia(username):
         print("Nenhum treino registrado para esse usuário.")
         return
     
-    frequencia_por_data = []
+    frequencia_por_data = {}
 
     for treino in treinos[username]:
         data = treino["data"]
         if data in frequencia_por_data:
-            treino = treino + 1
+            frequencia_por_data[data] += 1
         else:
-            treino = 1
+            frequencia_por_data[data] = 1
+
+    #Separar dados
+    datas = list(frequencia_por_data.keys())
+    frequencias = list(frequencia_por_data.values())
+
+    #Criar o gráfico
+    plt.figure(figsize=(10,5))
+    plt.bar(datas, frequencias, color='skyblue')
+    plt.title("Frequência de Treino por Data")
+    plt.xlabel("Data")
+    plt.ylabel("Número de Exercícios")
+    plt.xticks(rotation=45)
+    plt.tight_layout() #Ajusta o layout para não cortar os textos
+    plt.grid(axis='y', linestyle='--', alpha=0.5)
+
+    #Mostrar o gráfico
+    plt.show()
+    

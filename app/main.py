@@ -1,4 +1,4 @@
-from auth import login_user, register_user, registrar_treino, ver_treinos_por_data
+from auth import login_user, register_user, registrar_treino, ver_treinos_por_data, gerar_grafico_frequencia
 
 def main():
     while True:
@@ -27,7 +27,8 @@ def menu_usuario(username):
         print("\n=== MENU DO USUÁRIO ===")
         print("1. Registrar Treino")
         print("2. Ver Meus Treinos")
-        print("3. Sair")
+        print("3. Gráfico de Frequência")
+        print("4. Sair")
 
         opt = input("Escolha uma opção: ")
 
@@ -36,6 +37,8 @@ def menu_usuario(username):
         elif opt == "2":
             ver_treinos_por_data(username)
         elif opt == "3":
+            gerar_grafico_frequencia(username)
+        elif opt == "4":
             print("Saindo...")
             break
         else:
